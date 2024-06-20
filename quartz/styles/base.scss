@@ -16,11 +16,13 @@ section {
   box-sizing: border-box;
   background-color: var(--light);
   font-family: var(--bodyFont);
+  font-size: 1.25rem;
   color: var(--darkgray);
 }
 
 .text-highlight {
-  background-color: #fff23688;
+  color: var(--light);
+  background-color: #E5C07B;
   padding: 0 0.1rem;
   border-radius: 5px;
 }
@@ -58,7 +60,6 @@ strong {
 }
 
 a {
-  font-weight: $semiBoldWeight;
   text-decoration: none;
   transition: color 0.2s ease;
   color: var(--secondary);
@@ -193,6 +194,7 @@ a {
   & .page-header {
     width: $pageWidth;
     margin: $topSpacing auto 0 auto;
+    font-size: 0.9rem;
     @media all and (max-width: $fullPageWidth) {
       width: initial;
       margin-top: 2rem;
@@ -209,6 +211,16 @@ a {
       margin-left: 0;
       margin-right: 0;
     }
+  }
+
+  // Fix popover overflow
+  & #quartz-body {
+    position: relative;
+    z-index: 1;
+  }
+  & .footer{
+    position: relative;
+    z-index: 0;
   }
 }
 
@@ -358,7 +370,7 @@ pre {
   & > code {
     background: none;
     padding: 0;
-    font-size: 0.85rem;
+    font-size: 1rem;
     counter-reset: line;
     counter-increment: line 0;
     display: grid;
@@ -407,7 +419,7 @@ code {
   font-family: var(--codeFont);
   border-radius: 5px;
   padding: 0.1rem 0.2rem;
-  background: var(--lightgray);
+  background: var(--primary);
 }
 
 tbody,

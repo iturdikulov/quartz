@@ -1,0 +1,18 @@
+---
+date: 2023-09-14
+external:
+  - https://www.seporaitis.net/posts/2020/05/19/large-scale-refactoring-with-pybowler/
+directory: ~/Computer/programming/Seporaitis-Large_Scale_Refactoring_With_PyBowler/
+archive: true
+tags:
+  - inbox
+  - research
+  - SR_programming
+sr-due: 2024-06-16
+sr-interval: 143
+sr-ease: 246
+---
+
+# Large Scale Refactoring With PyBowler
+
+
