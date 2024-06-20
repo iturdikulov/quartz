@@ -9,3 +9,21 @@ tsconfig.tsbuildinfo
 private/
 .replit
 replit.nix
+
+# Temprory files
+.stversions/
+.trash/
+.venv/
+.obsidian/
+
+# Personal
+content/external/salesloop
+content/private/
+
+# Inbox files
+content/inbox/
+content/books/
+content/!inbox/**/*.md
+content/TODO.md
+content/My_buy_list.md
+
