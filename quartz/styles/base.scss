@@ -155,19 +155,24 @@ a {
       flex: 1;
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 1.5rem;
       top: 0;
       width: $sidePanelWidth;
       margin-top: $topSpacing;
       box-sizing: border-box;
       padding: 0 4rem;
       position: fixed;
+
       @media all and (max-width: $fullPageWidth) {
         position: initial;
         flex-direction: row;
         padding: 0;
         width: initial;
         margin-top: 2rem;
+      }
+
+      @media all and (max-width: $mobileBreakpoint) {
+        flex-direction: column;
       }
     }
 
@@ -176,6 +181,10 @@ a {
       @media all and (max-width: $fullPageWidth) {
         gap: 0;
         align-items: center;
+
+        .search{
+          margin-bottom: 1rem;
+        }
       }
     }
 
@@ -197,7 +206,7 @@ a {
     font-size: 0.9rem;
     @media all and (max-width: $fullPageWidth) {
       width: initial;
-      margin-top: 2rem;
+      margin-top: 0rem;
     }
   }
 
