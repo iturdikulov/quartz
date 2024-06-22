@@ -30,6 +30,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.DesktopOnly(Component.Explorer()),
   ],
   right: [
+    Component.MobileOnly(Component.Explorer()),
     Component.Graph({
       localGraph: {
         showTags: false,
