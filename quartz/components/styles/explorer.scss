@@ -63,6 +63,10 @@ button#explorer {
       max-height 0.35s ease,
       transform 0.35s ease,
       opacity 0.2s ease;
+    & li {
+      line-height: 1.2;
+      margin-bottom: 0.8rem;
+    }
     & li > a {
       color: var(--dark);
       opacity: 0.75;
