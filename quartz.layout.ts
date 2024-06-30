@@ -27,10 +27,14 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
+    Component.DesktopOnly(Component.Explorer({
+      folderDefaultState: "open"
+    })),
   ],
   right: [
-    Component.MobileOnly(Component.Explorer()),
+    Component.MobileOnly(Component.Explorer({
+      folderDefaultState: "open"
+    })),
     Component.Graph({
       localGraph: {
         showTags: false,
@@ -52,7 +56,9 @@ export const defaultListPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
+    Component.DesktopOnly(Component.Explorer({
+      folderDefaultState: "open"
+    })),
   ],
   right: [],
 }
