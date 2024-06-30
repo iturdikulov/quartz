@@ -1,4 +1,7 @@
+@use "../../styles/variables.scss" as *;
+
 footer {
+  font-size: 1rem;
   text-align: left;
   margin-bottom: 4rem;
   opacity: 0.7;
@@ -11,5 +14,11 @@ footer {
     flex-direction: row;
     gap: 1rem;
     margin-top: -1rem;
+  }
+
+  @media all and (max-width: $mobileBreakpoint) {
+    & ul {
+      flex-direction: column;
+    }
   }
 }
