@@ -10,6 +10,7 @@ export const sharedPageComponents: SharedLayout = {
       "GitHub </>": "https://github.com/iturdikulov",
       "YouTube": "https://www.youtube.com/@iturdikulov",
       "LinkedIn": "https://www.linkedin.com/in/iturdikulov/",
+      "RSS": "/index.xml",
     },
   }),
 }
