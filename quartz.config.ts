@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "iturdikulov.com",
     ignorePatterns: ["private", "templates", ".obsidian", "books", "img/*.md"],
     defaultDateType: "created",
     generateSocialImages: false,
