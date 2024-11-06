@@ -36,6 +36,8 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Explorer({
       folderDefaultState: "open"
     })),
+    Component.Backlinks(),
+    Component.DesktopOnly(Component.TableOfContents()),
     Component.Graph({
       localGraph: {
         showTags: false,
@@ -44,8 +46,6 @@ export const defaultContentPageLayout: PageLayout = {
         showTags: false,
       },
     }),
-    Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks(),
   ],
 }
 
