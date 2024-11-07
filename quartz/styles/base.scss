@@ -24,11 +24,22 @@ section {
   padding: 0 0.1rem;
   border-radius: 5px;
 }
+<<<<<<< HEAD
 ::selection {
   background: color-mix(in srgb, var(--tertiary) 60%, rgba(255, 255, 255, 0));
   color: var(--darkgray);
 }
 
+||||||| parent of e815eb8 (Use default text higlhigting)
+
+::selection {
+  background: color-mix(in srgb, var(--tertiary) 60%, rgba(255, 255, 255, 0));
+  color: var(--darkgray);
+}
+
+=======
+
+>>>>>>> e815eb8 (Use default text higlhigting)
 p,
 ul,
 text,
@@ -267,6 +278,17 @@ a {
       margin-left: 0;
     }
   }
+
+  // Fix popover overflow (footer)
+  // FIXME: do this still required?
+  & #quartz-body {
+    position: relative;
+    z-index: 1;
+  }
+  & .footer{
+    position: relative;
+    z-index: 0;
+  }
 }
 
 .footnotes {
@@ -415,12 +437,12 @@ pre {
   & > code {
     background: none;
     padding: 0;
-    font-size: 0.85rem;
+    font-size: 1rem;
     counter-reset: line;
     counter-increment: line 0;
     display: grid;
     padding: 0.5rem 0;
-    overflow-x: auto;
+    overflow-x: scroll;
 
     & [data-highlighted-chars] {
       background-color: var(--highlight);
@@ -464,7 +486,7 @@ code {
   font-family: var(--codeFont);
   border-radius: 5px;
   padding: 0.1rem 0.2rem;
-  background: var(--lightgray);
+  background: var(--primary);
 }
 
 tbody,
