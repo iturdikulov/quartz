@@ -132,6 +132,7 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                   !node.children[0].value.startsWith("#")
                 ) {
                   node.children[0].value = path.basename(node.children[0].value)
+                  node.children[0].value = node.children[0].value.replaceAll("_", " ")
                 }
               }
 
