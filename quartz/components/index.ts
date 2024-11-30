@@ -18,12 +18,8 @@ import DesktopOnly from "./DesktopOnly"
 import MobileOnly from "./MobileOnly"
 import RecentNotes from "./RecentNotes"
 import Breadcrumbs from "./Breadcrumbs"
-<<<<<<< HEAD
 import Comments from "./Comments"
-||||||| parent of d255d20 (Integrate excalidraw component from https://github.com/bartkl/bartkl.github.io)
-=======
 import RenderExcalidraw from "./RenderExcalidraw"
->>>>>>> d255d20 (Integrate excalidraw component from https://github.com/bartkl/bartkl.github.io)
 
 export {
   Content,
