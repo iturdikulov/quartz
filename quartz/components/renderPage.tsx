@@ -227,11 +227,12 @@ export function renderPage(
             {LeftComponent}
             <div class="center">
               <div class="page-header">
-                <Header {...componentData}>
-                  {header.map((HeaderComponent) => (
-                    <HeaderComponent {...componentData} />
-                  ))}
-                </Header>
+                {/* FIXME: uncomment if you have some header components (quartz.layout.ts) */}
+                {/* <Header {...componentData}> */}
+                {/*   {header.map((HeaderComponent) => ( */}
+                {/*     <HeaderComponent {...componentData} /> */}
+                {/*   ))} */}
+                {/* </Header> */}
                 <div class="popover-hint">
                   {beforeBody.map((BodyComponent) => (
                     <BodyComponent {...componentData} />
