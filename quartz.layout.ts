@@ -25,19 +25,10 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   left: [
     Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Search(),
-    Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer({
-      folderDefaultState: "open"
-    })),
   ],
   right: [
-    Component.MobileOnly(Component.Explorer({
-      folderDefaultState: "open"
-    })),
-    Component.Backlinks(),
-    Component.DesktopOnly(Component.TableOfContents()),
+    Component.Search(),
+    Component.Darkmode(),
     Component.Graph({
       localGraph: {
         showTags: false,
@@ -46,14 +37,16 @@ export const defaultContentPageLayout: PageLayout = {
         showTags: false,
       },
     }),
+    Component.Backlinks(),
+    Component.DesktopOnly(Component.TableOfContents()),
   ],
 }
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [Component.Breadcrumbs(), Component.ContentMeta()],
-  left: [
-    Component.PageTitle(),
+  left: [Component.PageTitle()],
+  right: [
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
@@ -61,5 +54,4 @@ export const defaultListPageLayout: PageLayout = {
       folderDefaultState: "open"
     })),
   ],
-  right: [],
 }
