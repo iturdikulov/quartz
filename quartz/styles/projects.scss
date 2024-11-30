@@ -13,6 +13,12 @@
   }
 }
 
+:root[saved-theme="light"] a.internal,
+:root[saved-theme="light"] a.external {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
 .central-featured-project {
   --projects-per-row: 4;
   --offset-x-size: 6%;

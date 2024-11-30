@@ -16,7 +16,7 @@ footer {
     margin-top: -1rem;
   }
 
-  @media all and (max-width: $mobileBreakpoint) {
+  @media all and ($mobile) {
     & ul {
       flex-direction: column;
     }
