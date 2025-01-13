@@ -17,7 +17,7 @@ const config: QuartzConfig = {
     },
     locale: "en-US",
     baseUrl: "iturdikulov.com",
-    ignorePatterns: ["private", "templates", ".obsidian", "books", "img/*.md"],
+    ignorePatterns: ["private", "templates", ".obsidian", "books", "img/*.md", ".sync"],
     defaultDateType: "created",
     generateSocialImages: false,
     theme: {
