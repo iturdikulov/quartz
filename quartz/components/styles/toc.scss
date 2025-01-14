@@ -52,6 +52,7 @@ button#toc {
     visibility 0s linear 0s;
   position: relative;
   visibility: visible;
+  font-size: 0.9rem;
 
   &.collapsed {
     max-height: 0;
@@ -69,6 +70,9 @@ button#toc {
     list-style: none;
     margin: 0.5rem 0;
     padding: 0;
+    & > li{
+      margin-bottom: 0;
+    }
     & > li > a {
       color: var(--dark);
       opacity: 0.35;

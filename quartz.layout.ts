@@ -25,10 +25,12 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   left: [
     Component.PageTitle(),
-  ],
-  right: [
     Component.Search(),
     Component.Darkmode(),
+  ],
+  right: [
+    Component.TableOfContents(),
+    Component.Backlinks(),
     Component.Graph({
       localGraph: {
         showTags: false,
@@ -37,8 +39,6 @@ export const defaultContentPageLayout: PageLayout = {
         showTags: false,
       },
     }),
-    Component.Backlinks(),
-    Component.DesktopOnly(Component.TableOfContents()),
   ],
 }
 
