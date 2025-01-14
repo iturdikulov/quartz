@@ -34,6 +34,8 @@ export interface Options {
   enableYouTubeEmbed: boolean
   enableVideoEmbed: boolean
   enableCheckbox: boolean
+  customCheckboxes: boolean
+  customCheckboxMappings: Record<string, string>
 }
 
 const defaultOptions: Options = {
@@ -49,6 +51,25 @@ const defaultOptions: Options = {
   enableYouTubeEmbed: true,
   enableVideoEmbed: true,
   enableCheckbox: false,
+  customCheckboxes: true,
+  customCheckboxMappings: {
+    "-": "➖",
+    "!": "❗",
+    "?": "❓",
+    "b": "🔖",
+    "I": "💡",
+    "p": "👍",
+    "c": "👎",
+    "i": "ℹ️",
+    "l": "🌏",
+    "*": "⭐",
+    "n": "📌",
+    "S": "💰",
+    "<": "📅",
+    ">": "↪️",
+    '"': "💭",
+    '/': "⬛"
+  }
 }
 
 const calloutMapping = {
@@ -138,6 +159,7 @@ const videoExtensionRegex = new RegExp(/\.(mp4|webm|ogg|avi|mov|flv|wmv|mkv|mpg|
 const wikilinkImageEmbedRegex = new RegExp(
   /^(?<alt>(?!^\d*x?\d*$).*?)?(\|?\s*?(?<width>\d+)(x(?<height>\d+))?)?$/,
 )
+const customCheckboxRegex = /^(\s*)- \[(-|!|\?|b|I|p|c|i|l|\*|n|S|<|>|"|\/)\]\s*(.*)$/gm
 
 export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>> = (userOpts) => {
   const opts = { ...defaultOptions, ...userOpts }
@@ -146,6 +168,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
     const hast = toHast(ast, { allowDangerousHtml: true })!
     return toHtml(hast, { allowDangerousHtml: true })
   }
+
 
   return {
     name: "ObsidianFlavoredMarkdown",
@@ -206,6 +229,16 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
           }
 
           return `${embedDisplay}[[${fp}${displayAnchor}${displayAlias}]]`
+        })
+      }
+
+      if (opts.customCheckboxes) {
+        if (src instanceof Buffer) {
+          src = src.toString()
+        }
+
+        src = src.replace(customCheckboxRegex, (match, spaces, checkType, text) => {
+          return "\n" + "\t".repeat((spaces?.length || 0) / 4) + "- <span class='custom-checkbox'>" + (opts.customCheckboxMappings[checkType] || match) + " " + text + "</span>"
         })
       }
 
