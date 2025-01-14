@@ -238,7 +238,7 @@ export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<Partial<Options>>
         }
 
         src = src.replace(customCheckboxRegex, (match, spaces, checkType, text) => {
-          return "\n" + "\t".repeat((spaces?.length || 0) / 4) + "- <span class='custom-checkbox'>" + (opts.customCheckboxMappings[checkType] || match) + " " + text + "</span>"
+          return "\n" + "\t".repeat((spaces?.length || 0) / 4) + "- <span class='custom-checkbox'><span class='custom-checkbox_marker'>" + (opts.customCheckboxMappings[checkType] || match) + "</span> " + text + "</span>"
         })
       }
 

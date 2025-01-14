@@ -11,3 +11,9 @@ li:has(> span.custom-checkbox) {
   list-style-type: none;
   margin-left: -1.5rem;
 }
+
+// Dimensions like for input[type="checkbox"]
+.custom-checkbox_marker{
+  font-size: 16px;
+  line-height: 16px;
+}
