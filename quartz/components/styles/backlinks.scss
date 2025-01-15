@@ -24,6 +24,10 @@
   }
 
   & > .overflow {
+    & > li:last-of-type{
+      margin-bottom: 0;
+    }
+
     &:after {
       display: none;
     }

@@ -180,7 +180,7 @@
             padding: 1em;
             cursor: pointer;
             transition: background 0.2s ease;
-            border-bottom: 1px solid var(--lightgray);
+            border-bottom: 1px solid var(--primary);
             width: 100%;
             display: block;
             box-sizing: border-box;
@@ -198,7 +198,7 @@
             &:hover,
             &:focus,
             &.focus {
-              background: var(--lightgray);
+              background: var(--primary);
             }
 
             & > h3 {
