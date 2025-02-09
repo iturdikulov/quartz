@@ -17,3 +17,10 @@ li:has(> span.custom-checkbox) {
   font-size: 16px;
   line-height: 16px;
 }
+
+// Custom flashcard separator
+br.f{
+    display: block;
+    content: '';
+    margin: .1rem 0;
+}
