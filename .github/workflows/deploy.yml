@@ -26,6 +26,11 @@ jobs:
           node-version: 22
       - name: Install Dependencies
         run: npm ci
+      # Update references
+      - name: Git Submodule Update
+        run: |
+          git pull --recurse-submodules
+          git submodule update --remote --recursive
       - name: Build Quartz
         run: npx quartz build
       - name: Upload artifact
