@@ -27,6 +27,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.PageTitle(),
     Component.Search(),
     Component.Darkmode(),
+    Component.RecentNotes({limit: 8, showTags: false}),
   ],
   right: [
     Component.DesktopOnly(Component.TableOfContents()),
