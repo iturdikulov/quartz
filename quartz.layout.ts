@@ -28,11 +28,13 @@ export const defaultContentPageLayout: PageLayout = {
     Component.PageTitle(),
     Component.Search(),
     Component.Darkmode(),
+    Component.DesktopOnly(
       Component.RecentNotes({
           limit: 8,
           showTags: false,
           filter: (node) => !node.filePath?.includes(".txt"),
       }),
+    ),
   ],
   right: [
     Component.DesktopOnly(Component.TableOfContents()),
