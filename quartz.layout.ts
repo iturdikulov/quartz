@@ -1,5 +1,6 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import { QuartzPluginData } from "./quartz/plugins/vfile"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -27,7 +28,11 @@ export const defaultContentPageLayout: PageLayout = {
     Component.PageTitle(),
     Component.Search(),
     Component.Darkmode(),
-    Component.RecentNotes({limit: 8, showTags: false}),
+      Component.RecentNotes({
+          limit: 8,
+          showTags: false,
+          filter: (node) => !node.filePath?.includes(".txt"),
+      }),
   ],
   right: [
     Component.DesktopOnly(Component.TableOfContents()),
