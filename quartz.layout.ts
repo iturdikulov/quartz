@@ -29,23 +29,23 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Search(),
     Component.Darkmode(),
     Component.DesktopOnly(
-      Component.RecentNotes({
-          limit: 8,
+      Component.Graph({
+        localGraph: {
           showTags: false,
-          filter: (node) => !node.filePath?.includes(".txt"),
-      }),
+        },
+        globalGraph: {
+          showTags: false,
+        },
+      })
     ),
   ],
   right: [
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
-    Component.Graph({
-      localGraph: {
+    Component.RecentNotes({
+        limit: 6,
         showTags: false,
-      },
-      globalGraph: {
-        showTags: false,
-      },
+        filter: (node) => !node.filePath?.includes(".txt"),
     }),
   ],
 }

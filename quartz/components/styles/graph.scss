@@ -71,3 +71,9 @@
     }
   }
 }
+
+.graph.desktop-only{
+  @media all and (($mobile) or ($tablet)) {
+      display: none;
+  }
+}
